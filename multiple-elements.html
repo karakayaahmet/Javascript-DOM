@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card-header">
+        <h3 class="card-title" id="title">To Do App</h3>
+    </div>
+
+    <ul id="task-list">
+        <li class="task">Görev 1</li>
+        <li class="task">Görev 2</li>
+        <li class="task">Görev 3</li>
+    </ul>
+
+    <ul id="task-list2">
+        <li class="task">Görev 1</li>
+        <li class="task">Görev 2</li>
+        <li class="task">Görev 3</li>
+    </ul>
+
+    <script>
+        let sonuc;
+
+        sonuc = document.getElementsByClassName("task");
+        sonuc = document.getElementsByClassName("task")[0];
+
+        let tasklist = document.getElementsByClassName("task");
+
+        let ul = document.getElementById("task-list");
+        let yeniliste = ul.getElementsByClassName("task");
+
+        for(let i of yeniliste){
+            i.style.color = "blue";
+        }
+
+        for(let i=0; i<tasklist.length; i++){
+            console.log(tasklist[i]);
+        }
+
+        // for(let task of tasklist){
+        //     task.style.color = "red";
+        //     task.style.fontSize = "20px"; 
+
+        // }
+
+        query = document.querySelectorAll("#task-list2 li");
+
+        for(let i of query){
+            i.style.color = "red";
+            i.style.fontSize = "20px";
+        }
+
+        console.log(sonuc);
+    </script>
+</body>
+</html>
